@@ -1,0 +1,41 @@
+* Chapter 1
+  Basic J functions with lists
+  #+BEGIN_SRC j
+    i.5 NB. list
+    
+    2 * i.5 NB. Doubles a list
+    
+    2 ^ i.5 NB. Raises list elements to power of 2
+    
+    *: i.5 NB. Squares a list
+  #+END_SRC
+
+  Trigonometry
+  #+BEGIN_SRC j
+    load 'trig'
+    
+    1r4p1 NB. pi / 4
+    
+    1r4p1 * i.5
+    
+    sin 1r4p1 * i.5
+    
+    1 o. 1r4p1 * i.5 NB. 1 o. y = sin y
+    2 o. 1r4p1 * i.5 NB. 2 o. y = cos y
+  #+END_SRC
+
+  Creating tables
+  #+BEGIN_SRC j
+    1 2 3 +/ 1 2 3 NB. 'plus' table
+    1 2 3 +/ 1 2 3 4 NB. 3x4 matrix whose (i,j)-th entry is the i-th of the LHS plus the j-th of the RHS
+    
+    1 2 3 */ 1 2 3 4 NB. similarly for multiplication
+    2 * 1 2 3 */ 1 2 3 4 NB. we can multiply tables too
+    
+    2 1 o./ 1r4p1 * i.5 NB. Table whose first row is the cosine of n/4 pi for n = 0..4, similarly for sin on second row
+    
+    |: 2 1 o./ 1r4p1 * i.5 NB. We can transpose these, too
+  #+END_SRC
+
+  Since x^2 + y^2 = 1 has solutions x = cos(theta), y = sin(theta) for
+  theta in [0,2pi) all of these pairs lie on the unit circle.
