@@ -1,0 +1,8 @@
+#+TITLE: Introduction
+
+* Installation
+  + Install the J language from jsoftware.com.
+  + Run jconsole and run `install 'all'`
+  + Install j-mode.el
+    + Customise the j-console-cmd to point to the actual jconsole, not
+      the java command.
